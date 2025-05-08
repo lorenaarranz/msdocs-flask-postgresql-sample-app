@@ -55,7 +55,7 @@ def create_restaurant():
 @csrf.exempt
 def add_restaurant():
     try:
-        name = request.values.get('restaurant_name')
+        nombre = request.values.get('restaurant_name')
         street_address = request.values.get('street_address')
         description = request.values.get('description')
     except (KeyError):
@@ -65,7 +65,7 @@ def add_restaurant():
         })
     else:
         restaurant = Restaurant()
-        restaurant.name = name
+        restaurant.nombre = nombre
         restaurant.street_address = street_address
         restaurant.description = description
         db.session.add(restaurant)
