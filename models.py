@@ -7,7 +7,7 @@ from app import db
 class Restaurant(db.Model):
     __tablename__ = 'restaurant'
     id = Column(Integer, primary_key=True)
-    nombre = Column(String(50))
+    name = Column(String(50))
     street_address = Column(String(50))
     description = Column(String(250))
 
